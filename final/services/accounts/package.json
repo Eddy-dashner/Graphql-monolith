@@ -8,8 +8,8 @@
     "node": ">=14.0.0 <=20"
   },
   "scripts": {
-    "start": "node index.js",
-    "start-dev": "nodemon .",
+    "start": "node init && node index.js",
+    "start-dev": "node init && nodemon .",
     "db:init": "sequelize-cli db:migrate && sequelize-cli db:seed:all",
     "db:reset": "sequelize-cli db:migrate:undo:all && npm run db:init"
   },
